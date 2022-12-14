@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="cs-cz">
+
+<head>
+    <base href="/localhost" />
+    <meta charset="UTF-8" />
+    <title><?= $titulek ?></title>
+    <meta name="description" content="<?= $popis ?>" />
+    <meta name="keywords" content="<?= $klicova_slova ?>" />
+    <link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+    <header>
+        <h1>Evidence pojištění</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="pojistenci">Pojištěnci</a></li>
+            <li><a href="oaplikaci">O aplikaci</a></li>
+        </ul>
+    </nav>
+    <br clear="both" />
+
+    <?php foreach ($zpravy as $zprava) : ?>
+        <p class="zprava"><?= $zprava ?></p>
+    <?php endforeach ?>
+
+    <article>
+        <?php $this->kontroler->vypisPohled(); ?>
+    </article>
+
+    <footer>
+        <p>Projekt k závěrečné zkoušce - programátor WWW aplikací v PHP. Vytvořila &copy;Monika Mariková 2022</p>
+    </footer>
+</body>
+
+</html>

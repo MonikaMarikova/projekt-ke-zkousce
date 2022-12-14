@@ -1,0 +1,45 @@
+<section>
+    <h1>Pojištěnci</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Jméno a příjmení</th>
+                <th>Telefon</th>
+                <th>Věk</th>
+            </tr>
+        </thead>
+        <tbody>
+            <?php foreach ($pojistenci as $pojistenec) : ?> 
+                <tr>
+                    <td>
+                        <strong><?= $pojistenec['jmeno'] ?> <?= $pojistenec['prijmeni'] ?></strong>
+                    </td>
+                    <td class="centrovany"><?= $pojistenec['telefon'] ?></td>
+                    <td class="centrovany"><?= $pojistenec['vek'] ?></td>
+                </tr>
+            <?php endforeach ?>
+        </tbody>
+    </table>
+</section>
+
+<section>
+    <h1>Nový pojištěnec</h1>
+
+    <form method="post">
+        <div class="formular">
+        <label for="jmeno">Jméno</label>
+        <input type="text" id="jmeno" name="jmeno" required="required" value="<?php if (isset($_POST['jmeno'])) echo(htmlspecialchars($_POST['jmeno'])); ?>" />
+        <label for="prijmeni">Příjmení</label>
+        <input type="text" id="prijmeni" name="prijmeni" required="required" value="<?php if (isset($_POST['prijmeni'])) echo(htmlspecialchars($_POST['prijmeni'])); ?>" />
+        </div>
+        <div class="formular">
+        <label for="vek">Věk</label>
+        <input type="text" id="vek" name="vek" required="required" value="<?php if (isset($_POST['vek'])) echo(htmlspecialchars($_POST['vek'])); ?>" />
+        <label for="telefon">Telefon</label>
+        <input type="tel" id="telefon" name="telefon" required="required" value="<?php if (isset($_POST['telefon'])) echo(htmlspecialchars($_POST['telefon'])); ?>" />
+        </div>
+
+        <input type="submit" value="Uložit" />
+    </form>
+</section>
+

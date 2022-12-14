@@ -1,0 +1,141 @@
+body {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 16px;
+    max-width: 900px;
+    margin: 0 auto;
+    color: #414042;
+    background: linear-gradient(white,#9da0e4, #3335b4);
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    min-height: 100vh;
+}
+
+h1 {
+    text-align: center;
+    color: #3335b4;
+    font-weight: 800;
+    text-shadow: 1px 1px 1px #a2a3a8;
+    font-variant: small-caps;
+    letter-spacing: 0.2em;
+}
+
+body>header {
+    height: 100px;
+    width: 100%;
+    color: white;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+footer {
+    font-size: 12px;
+    text-align: center;
+    padding-top: 20px;
+}
+
+footer p {
+    color: #a7a5a5;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 1.2em;
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+nav li {
+    float: left;
+    margin-right: 15px;
+}
+
+nav a {
+    background: #3335b4;
+    color: white;
+    padding: 7px 13px;
+    border-radius: 20px;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+}
+
+nav a:hover {
+    background: #3335b4e5;
+    color: #EEEEEE;
+    text-decoration: none;
+}
+
+article {
+    padding: 0px 10px;
+    flex: 1;
+}
+
+input[type="submit"] {
+    background: #3335b4;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 20px;
+    border: 0px;
+    padding: 10px 25px;
+    display: block;
+    margin: 0 auto;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+input[type="submit"]:hover {
+    background: #3335b4e5;
+    color: #EEEEEE;
+    cursor: pointer;
+}
+
+input[type="text"], input[type="tel"] {
+    width: 250px;
+    border-radius: 5px;
+    border: 1px solid #aaaaaa;
+    padding: 0.3em;
+    margin-bottom: 0.5em;
+}
+
+.formular {
+    display: grid;
+    grid-template-columns: 3fr 5fr;
+    column-gap: 0..7em;
+}
+
+label {
+    text-align: right;
+    margin-right: 0.9em;    
+}
+
+th {
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+    background-color: #dedff0;
+    padding: 0.5rem;
+}
+
+td {
+    border: 1px solid #9c9c9c;
+    padding: 0.5rem;
+    background-color: #ffffff;
+}
+
+table {
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: collapse;
+}
+
+.centrovany {
+    text-align: center;
+}
+
+.zprava {
+    border: 1px solid yellow;
+    background: rgb(255, 255, 184);
+    padding: 3px;
+}
+
